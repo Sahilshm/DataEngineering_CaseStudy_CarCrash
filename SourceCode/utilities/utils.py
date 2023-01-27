@@ -29,5 +29,4 @@ def writing_output(df, file_path, write_format):
     :param file_path: output file path
     :return: None
     """
-    # df = df.coalesce(1)
     df.write.format(write_format).mode('overwrite').option("header", "true").save(file_path)
