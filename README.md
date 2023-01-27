@@ -27,10 +27,10 @@ Data Set folder has 6 csv files. Please use the data dictionary to understand th
 2. Configure environment variables for Java, Apache Spark, Hadoop and Python.
 3. Setup `Makefile` (required for step 2 in "Steps for execution"), Guide for setup `https://linuxhint.com/run-makefile-windows/`
 
-### Steps for execution
+## Steps for execution
 1. Clone or Download the repository
 2. Go to the Project Directory: `cd DataEngineering_CaseStudy_CarCrash`
 3. On cmd, run `make build`. This will build the project to run via spark-submit. In this process a new folder with name "Deploy" is created, and the code artefacts are copied into it.
 4. Run `cd Deploy`
 5. Run `spark-submit --master "local[*]" --py-files src.zip --files config.yaml main.py`
-"Please update the commands as per your os, below mentioned are in case of windows os"
+### "Please update the commands as per your os, below mentioned are in case of windows os"
