@@ -31,4 +31,5 @@ Data Set folder has 6 csv files. Please use the data dictionary to understand th
 ###### "Please update the commands as per your os, below mentioned are in case of windows os"
 1. Go to the Project Directory: `cd DataEngineering_CaseStudy_CarCrash`
 2. On cmd, run `make build`. This will build the project to run via spark-submit. In this process a new folder with name "Deploy" is created, and the code artefacts are copied into it.
-3. Run `cd Deploy && spark-submit --master "local[*]" --py-files src.zip --files config.yaml main.py`
+3. Run `cd Deploy`
+4. Run `spark-submit --master "local[*]" --py-files src.zip --files config.yaml main.py`
