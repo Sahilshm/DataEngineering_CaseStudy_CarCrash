@@ -1,5 +1,5 @@
 # DataEngineering_CaseStudy_CarCrash
- Case Study mainly foucuses on analysis of US car crash data.
+ Case Study mainly foucuses on analysis of car crash data.
 
 ## Objective
 Data Set folder has 6 csv files. Please use the data dictionary to understand the dataset and then develop your approach to perform below analytics.
