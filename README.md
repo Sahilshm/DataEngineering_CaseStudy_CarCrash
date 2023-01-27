@@ -23,7 +23,7 @@ Data Set folder has 6 csv files. Please use the data dictionary to understand th
 5. Share the entire project as zip or link to project in GitHub repo.
 
 ## Pre-requisites
-1. Install JDK, Apache Spark, Hadoop, Python.
+1. Install JDK (jdk-8u301), Apache Spark (spark-3.3.1-bin-hadoop2), Hadoop, Python, winutils(Hadoop 2.7).
 2. Configure environment variables for Java, Apache Spark, Hadoop and Python.
 3. Setup `Makefile` (required for step 2 in "Steps for execution"), Guide for setup `https://linuxhint.com/run-makefile-windows/`
 
