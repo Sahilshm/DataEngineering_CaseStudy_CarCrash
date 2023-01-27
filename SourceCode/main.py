@@ -178,34 +178,44 @@ if __name__ == '__main__':
     vaa = VehicleAccidentAnalysis(config_file_path)
     output_file_paths = utils.reading_yaml(config_file_path).get("OUTPUT_PATH")
     file_format = utils.reading_yaml(config_file_path).get("FILE_FORMAT")
+    
+    print("")
+    print("Analysis Report")
+    print("--------------------------->")
+    print("")
 
-    # 1. Find the number of crashes (accidents) in which number of persons killed are male?
-    print("1. Result:", vaa.countMaleAccidents(output_file_paths.get(1), file_format.get("Output")))
-
-    # 2. How many two-wheelers are booked for crashes?
-    print("2. Result:", vaa.countTwoWheelerAccidents(output_file_paths.get(2), file_format.get("Output")))
-
-    # 3. Which state has the highest number of accidents in which females are involved?
-    print("3. Result:", vaa.stateWithHighestFemaleAccidents(output_file_paths.get(3), file_format.get("Output")))
-
-    # 4. Which are the Top 5th to 15th VEH_MAKE_IDs that contribute to a largest number of injuries including death
-    print("4. Result:", vaa.topVehiclesContributingInjuries(output_file_paths.get(4), file_format.get("Output")))
-
-    # 5. For all the body styles involved in crashes, mention the top ethnic user group of each unique body style
-    print("5. Result:")
+    print("1. Find the number of crashes (accidents) in which number of persons killed are male ?")
+    print("   Result:", vaa.countMaleAccidents(output_file_paths.get(1), file_format.get("Output")))
+    print("")
+    
+    print("2. How many two-wheelers are booked for crashes ?")
+    print("   Result:", vaa.countTwoWheelerAccidents(output_file_paths.get(2), file_format.get("Output")))
+    print("")
+    
+    print("3. Which state has the highest number of accidents in which females are involved ?")
+    print("   Result:", vaa.stateWithHighestFemaleAccidents(output_file_paths.get(3), file_format.get("Output")))
+    print("")
+    
+    print("4. Which are the Top 5th to 15th VEH_MAKE_IDs that contribute to a largest number of injuries including death ?")
+    print("   Result:", vaa.topVehiclesContributingInjuries(output_file_paths.get(4), file_format.get("Output")))
+    print("")
+    
+    print("5. For all the body styles involved in crashes, mention the top ethnic user group of each unique body style")
+    print("   Result:")
     vaa.topEthnicUsrCrashForEachBodyStyle(output_file_paths.get(5), file_format.get("Output"))
-
-    # 6. Among the crashed cars, what are the Top 5 Zip Codes with the highest number crashes with alcohols as the
-    # contributing factor to a crash (Use Driver Zip Code)
-    print("6. Result:", vaa.top_5_zipCodesWithAlcoholsCauseForCrash(output_file_paths.get(6), file_format.get("Output")))
-
-    # 7. Count of Distinct Crash IDs where No Damaged Property was observed and Damage Level (VEH_DMAG_SCL~) is above 4
-    # and car avails Insurance
-    print("7. Result:", vaa.crashIdsWithNoDamage(output_file_paths.get(7), file_format.get("Output")))
-
-    # 8. Determine the Top 5 Vehicle Makes/Brands where drivers are charged with speeding related offences, has licensed
-    # Drivers, uses top 10 used vehicle colours and has car licensed with the Top 25 states with highest number of
-    # offences (to be deduced from the data)
-    print("8. Result:", vaa.top_5_vehicleBrandsWithHigestOffences(output_file_paths.get(8), file_format.get("Output")))
+    print("")
+    
+    print("6. Among the crashed cars, what are the Top 5 Zip Codes with the highest number crashes with alcohols as the contributing factor to a crash (Use Driver Zip Code) ?")
+    print("   Result:", vaa.top_5_zipCodesWithAlcoholsCauseForCrash(output_file_paths.get(6), file_format.get("Output")))
+    print("")
+    
+    print("7. Count of Distinct Crash IDs where No Damaged Property was observed and Damage Level (VEH_DMAG_SCL~) is above 4 and car avails Insurance ?")
+    print("   Result:", vaa.crashIdsWithNoDamage(output_file_paths.get(7), file_format.get("Output")))
+    print("")
+    
+    print("""8. Determine the Top 5 Vehicle Makes/Brands where drivers are charged with speeding related offences, 
+    has licensed Drivers, uses top 10 used vehicle colours and has car licensed with the Top 25 states with highest number of offences (to be deduced from the data) ?""")
+    print("   Result:", vaa.top_5_vehicleBrandsWithHigestOffences(output_file_paths.get(8), file_format.get("Output")))
+    print("")
 
     spark.stop()
